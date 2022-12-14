@@ -12,3 +12,6 @@ After you necessary up migration.
 
 ## The project will be available by port 8001 [http://localhost:8001/](http://localhost:8001/)
 
+## For parsing posts by console should you folow command 
+
+`php bin/console app:parse-posts`
