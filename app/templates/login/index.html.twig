@@ -1,22 +1,28 @@
-{% extends 'base.html.twig' %}
+{% extends 'layouts/layout.html.twig' %}
+{% block title %}Authorization{% endblock %}
 
-{% block title %}Hello LoginController!{% endblock %}
-
-{% block body %}
+{% block content %}
     {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col">
+                <form class="form" action="{{ path('app_login') }}" method="post">
+                    <label for="username">Email:</label><br>
+                    <input type="text" id="username"  class="form-control"name="_username" value="{{ last_username }}"/><br>
 
-    <form action="{{ path('app_login') }}" method="post">
-        <label for="username">Email:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}">
+                    <label for="password">Password:</label><br>
+                    <input type="password" class="form-control" id="password" name="_password"/>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password">
-
-        <input type="hidden" name="/" value="/">
-
-        <button type="submit">login</button>
-    </form>
+                    {# If you want to control the URL the user is redirected to on success
+        <input type="hidden" name="_target_path" value="/account"/> #}
+                    <br>
+                    <input type="submit" value="login" class="btn btn-outline-primary"></input>
+                </form>
+                <a href="{{ path('register') }}" class="btn btn-outline-primary">Sing in</a>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

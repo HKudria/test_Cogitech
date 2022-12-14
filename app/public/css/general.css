@@ -1,0 +1,177 @@
+body{
+    background: #fff;
+}
+
+.contact{
+    padding-left: 20px;
+}
+
+.contact p{
+    font-size: 20px;
+}
+.space{
+    padding-right: 5px;
+}
+.blog{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.blog .col-6{
+    padding-right: 3px;
+}
+
+nav{
+    margin-bottom: 15px;
+}
+
+.card{
+    margin-bottom: 10px;
+}
+
+.card-img, .card-author, .card-date {
+    margin-bottom: 10px;
+}
+.card-img{
+    height: 400px;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-img-max{
+    height: 500px;
+    width: auto;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.card-btn {
+    display: flex;
+}
+
+.card-btn a {
+    margin-right: 10px;
+}
+
+.form-delete{
+    display: contents;
+}
+
+.form-search{
+    margin-top: 12px;
+}
+
+.navbar{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.main-img{
+    object-fit: cover;
+}
+
+.row{
+    padding-top: 20px;
+}
+.rounded-circle-heading {
+    margin: auto auto auto 33.33333%;
+}
+
+.main-p, .main-h2{
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .collapse:not(.show) {
+        display: flex;
+    }
+
+    .offset-3 {
+        margin-left: 5%;
+    }
+
+    .navbar-nav {
+        display: block ruby;
+
+    }
+}
+
+@media (max-width: 1400px){
+    .order-md-2 {
+        order: unset !important;
+    }
+    .col-md-5 {
+        width: 100%;
+        text-align: center;
+    }
+    .col-md-7 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px){
+    .col-md-7 {
+        padding-left: 10%;
+    }
+
+}
+
+@media (max-width: 991px){
+
+    .rounded-circle-heading{
+        margin-left: 40%;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .card-header {
+        min-height: 87px;
+        text-align: center;
+    }
+
+    .admin{
+        display: none;
+    }
+
+    .rounded-circle-heading{
+        margin-left: 37%;
+    }
+
+    .blog{
+        display: block;
+    }
+
+    .blog .col-6{
+       width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+   .main-img{
+       width: inherit !important;
+      height: auto;
+   }
+    .rounded-circle-heading{
+        margin-left: 33%;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .rounded-circle-heading{
+        margin-left: 30%;
+    }
+
+}
+
+
+
+
+

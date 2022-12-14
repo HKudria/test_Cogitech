@@ -1,0 +1,38 @@
+{% extends 'layouts/layout.html.twig' %}
+{% block title %}Posts render page{% endblock %}
+
+{% block content %}
+        {% if error %}
+            <div>{{ error }}</div>
+        {% endif %}
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Body</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for post in posts %}
+                        <tr>
+                            <th scope="row">{{ post.postId }}</th>
+                            <td>{{ post.userName }}</td>
+                            <td>{{ post.title }}</td>
+                            <td>{{ post.body }}</td>
+                            <td><a href="{{ path('delete_post', {id:post.id}) }}" class="btn btn-outline-primary">Delete
+                                    post</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
